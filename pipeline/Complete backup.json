@@ -1,0 +1,56 @@
+{
+	"name": "Complete backup",
+	"properties": {
+		"activities": [
+			{
+				"name": "Complete Backup",
+				"description": "Complete backup for CosmosDB to ADLS2",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DocumentDbCollectionSource",
+						"nestingSeparator": "."
+					},
+					"sink": {
+						"type": "AzureBlobFSSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"id": "id",
+							"name": "name",
+							"property1": "property1",
+							"property2": "property2",
+							"_rid": "_rid",
+							"_self": "_self",
+							"_etag": "_etag",
+							"_attachments": "_attachments",
+							"_ts": "_ts"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "CosmosDBCollection",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureDataLakeStorageFile1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

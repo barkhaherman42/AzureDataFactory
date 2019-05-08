@@ -1,0 +1,22 @@
+{
+	"name": "DestinationDataset_3mh",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlobFSFile",
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat",
+				"filePattern": "arrayOfObjects"
+			},
+			"fileName": "backup.json",
+			"folderPath": {
+				"value": "backups/@concat('backup',formatDateTime(utcnow(),'YYMMddHH'))",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

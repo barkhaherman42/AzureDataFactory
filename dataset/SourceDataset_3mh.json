@@ -1,0 +1,14 @@
+{
+	"name": "SourceDataset_3mh",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CosmosDb1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "DocumentDbCollection",
+		"typeProperties": {
+			"collectionName": "Items"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

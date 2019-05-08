@@ -1,0 +1,24 @@
+{
+	"name": "Hourly",
+	"properties": {
+		"description": "Hourly",
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Complete backup",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2019-05-03T14:28:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
