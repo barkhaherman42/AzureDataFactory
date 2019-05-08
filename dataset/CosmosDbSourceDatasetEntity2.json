@@ -6,6 +6,44 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "DocumentDbCollection",
+		"structure": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "property1",
+				"type": "String"
+			},
+			{
+				"name": "property2",
+				"type": "String"
+			},
+			{
+				"name": "_rid",
+				"type": "String"
+			},
+			{
+				"name": "_self",
+				"type": "String"
+			},
+			{
+				"name": "_etag",
+				"type": "String"
+			},
+			{
+				"name": "_attachments",
+				"type": "String"
+			},
+			{
+				"name": "_ts",
+				"type": "Int64"
+			}
+		],
 		"typeProperties": {
 			"collectionName": "Items"
 		}
