@@ -1,0 +1,17 @@
+{
+	"name": "ParquetDestinationStore2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
