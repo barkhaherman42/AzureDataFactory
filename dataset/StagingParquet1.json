@@ -1,10 +1,14 @@
 {
 	"name": "StagingParquet1",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
+				"type": "AzureBlobFSLocation",
 				"fileName": "file.parquet",
 				"folderPath": "dataflow",
 				"container": "staging"
