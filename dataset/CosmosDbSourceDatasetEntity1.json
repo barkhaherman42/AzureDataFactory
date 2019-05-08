@@ -5,6 +5,9 @@
 			"referenceName": "CosmosDb1",
 			"type": "LinkedServiceReference"
 		},
-		"type": "DocumentDbCollection"
+		"type": "DocumentDbCollection",
+		"typeProperties": {
+			"collectionName": "Items"
+		}
 	}
 }
